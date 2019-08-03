@@ -11,4 +11,21 @@ public class IndexController{
 		return "index";
 	}
 	
+	@RequestMapping("/menu/jdbc.do")
+	public String showjdbcMenu(){
+		System.out.println("springjdbc");
+		return "menu/jdbc";
+	}
+	
+	@RequestMapping("/menu/mybatis.do")
+	public String showmybatisMenu(){
+		System.out.println("mybatis");
+		return "menu/mybatis";
+	}
+	
+	@RequestMapping("/menu/advanced.do")
+	public String showmyadvancedMenu(){
+		System.out.println("advanced");
+		return "menu/advanced";
+	}
 }

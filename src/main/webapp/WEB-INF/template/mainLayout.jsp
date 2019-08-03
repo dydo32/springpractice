@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +28,7 @@
 </head>
 <body>
 		<div id="top" class="row">
-				************************************
+			<tiles:insertAttribute name="top"></tiles:insertAttribute>
 		</div>
 		<div style="background-color: #edeef1;padding: 20px;height: 800px">
 		
@@ -40,14 +40,11 @@
 				        <div style="background-color:#63cde7;padding: 20px;
 				        font-family:HY-°ß°íµñ;font-size: 16pt;color: white;
 				         font-weight: bolder;">${loginUser.job_category}</div>
-
-				       	************************************
+						<tiles:insertAttribute name="menu"></tiles:insertAttribute>
       				 </div>
 			 	</div>
 			 	<div class="col-sm-8" style="background-color: white;height: 800px;">
-
-			 			************************************
-
+					<tiles:insertAttribute name="content"></tiles:insertAttribute>
 			 	</div>
 			</div>
 	</div>

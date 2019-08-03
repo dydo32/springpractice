@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<img alt="" src="/bigdataShop/resources/images/jang1.jpg">
+	<img alt="" src="/stswebTest/resources/images/flower.jpg">
 </body>
 </html>

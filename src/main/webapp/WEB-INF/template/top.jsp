@@ -54,10 +54,10 @@
 	<div class="container-fluid">
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="/stswebTest/index.do">Home</a></li>
 					<li><a href="/stswebTest/menu/jdbc.do">스프링JDBC</a></li>
-					<li><a href="#">myBatis</a></li>
-					<li><a href="#">고급기능</a></li>
+					<li><a href="/stswebTest/menu/mybatis.do">myBatis</a></li>
+					<li><a href="/stswebTest/menu/advanced.do">고급기능</a></li>
 					
 				</ul>
 
