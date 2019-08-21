@@ -1,15 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="list-group"> 
-		<a href="#"	class="list-group-item">°Ô½ÃÆÇµî·Ï</a> 
-		<a href="#" class="list-group-item">°Ô½ÃÆÇÁ¶È¸</a>
+		<a href="/stswebTest/board/insertView.do" class="list-group-item">ê²Œì‹œíŒë“±ë¡</a> 
+		<a href="/stswebTest/board/list.do?category=all" class="list-group-item">ê²Œì‹œíŒì¡°íšŒ</a>
 		
 	</div>
 </body>

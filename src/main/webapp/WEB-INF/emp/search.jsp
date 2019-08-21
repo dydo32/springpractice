@@ -1,21 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>х╦©Ь ╟к╩Ж</title>
+<meta charset="UTF-8">
+<title>М ▄Л⌡░ Й╡─Л┐┴</title>
 </head>
 
 <body>
 	<div align="center">
-		<form method="post" action="/annotation/search.do">
+		<form method="post" action="/stswebTest/search.do">
 			<input type="hidden" name="test" value="paramtest">
-			<h1>х╦©Ь ╟к╩Ж</h1>
+			<h1>М ▄Л⌡░ Й╡─Л┐┴(Лё╪Л├▄)</h1>
 			<h3>
-				аж╪р:<input type="text" name="addr" />
-				 <input type="submit"
-					value="╟к╩Ж">
+				Лё╪Л├▄:<input type="text" name="addr" />
+				 <input type="submit" value="Й╡─Л┐┴">
 			</h3>
 		</form>
 	</div>

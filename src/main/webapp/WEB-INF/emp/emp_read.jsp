@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="emp.dto.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="emp.dto.*"%>
 
 <!DOCTYPE html>
 <html>
 <head>
- <title>ÀÎ»ç°ü¸®½Ã½ºÅÛ</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
+<title>ì¸ì‚¬ê´€ë¦¬ì‹œìŠ¤í…œ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -42,84 +42,72 @@
       }
       .row.content {height:auto;} 
     }
-  </style>
+</style>
 </head>
 <body>
-<!-- top¿¡ º¸¿©Áú ¸Ş´º -->
+<!-- topì— ë³´ì—¬ì§ˆ ë©”ë‰´ -->
 <%-- <jsp:include page="../layout/top.jsp"></jsp:include> --%>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+	<div class="container-fluid text-center">    
+  		<div class="row content">
+    		<div class="col-sm-2 sidenav">
     <%-- 	<jsp:include page="../layout/emp_menu.jsp"></jsp:include> --%>
-    </div>
-	<div class="col-sm-10">
-	
-			<form role="form" class="form-horizontal"
-		action="/insaPro/read.do?id=${user.id}&action=UPDATE" 
-		method="post">
-				<fieldset>
-					<div id="legend">
-						<legend>¾Æ·¡ ¾ç½ÄÀ» ÀÛ¼ºÇØÁÖ¼¼¿ä.</legend>
+    		</div>
+		<div class="col-sm-10">
+		<form role="form" class="form-horizontal" action="/stswebTest/read.do?id=${user.id}&action=UPDATE" method="post">
+			<fieldset>
+				<div id="legend">
+					<legend>ì•„ë˜ ì–‘ì‹ì„ ì‘ì„±í•´ì£¼ì„¸ìš”.</legend>
+				</div>
+				<div class="form-group">
+					<!-- ë¶€ì„œì½”ë“œ-->
+					<label class="control-label col-sm-2" for="orgtel">ë¶€ì„œì½”ë“œ</label>
+					<div class="col-sm-3">
+						<!-- ë¶€ì„œì½”ë“œ -->
+						${user.deptNo }
 					</div>
+				</div>
+					
+				<div class="form-group">
+					<!-- ì‚¬ì›ì½”ë“œ -->
+					<label class="control-label col-sm-2" for="orgcode">ì‚¬ì›ì½”ë“œ</label>
+					<div class="col-sm-3">
+						<!-- ë¶€ì„œì½”ë“œë¥¼ ì´ê³³ì— ì¶œë ¥í•˜ì„¸ìš” -->
+						${user.id}
+					</div>
+				</div>
 					
 					<div class="form-group">
-						<!-- ºÎ¼­ÄÚµå-->
-						<label class="control-label col-sm-2" for="orgtel">ºÎ¼­ÄÚµå</label>
+						<!-- ì‚¬ì›ëª…-->
+						<label class="control-label col-sm-2" for="orgname">ì‚¬ì›ëª…</label>
 						<div class="col-sm-3">
-							<!-- ºÎ¼­ÄÚµå -->
-							${user.deptNo }
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<!-- »ç¿øÄÚµå -->
-						<label class="control-label col-sm-2" for="orgcode">»ç¿øÄÚµå</label>
-						<div class="col-sm-3">
-							<!-- ºÎ¼­ÄÚµå¸¦ ÀÌ°÷¿¡ Ãâ·ÂÇÏ¼¼¿ä -->
-							${user.id}
-						</div>
-					</div>
-
-					
-					
-					<div class="form-group">
-						<!-- »ç¿ø¸í-->
-						<label class="control-label col-sm-2" for="orgname">»ç¿ø¸í</label>
-						<div class="col-sm-3">
-							<!-- »ç¿ø¸íÀ» ÀÌ°÷¿¡ Ãâ·ÂÇÏ¼¼¿ä -->
+							<!-- ì‚¬ì›ëª…ì„ ì´ê³³ì— ì¶œë ¥í•˜ì„¸ìš” -->
 							${user.name }
 						</div>
 					</div>
-
-
-
-				
-
-
 					
 					<div class="form-group">
-						<!-- ÆĞ½º¿öµå-->
-						<label class="control-label col-sm-2" for="orgloc">ÆĞ½º¿öµå</label>
+						<!-- íŒ¨ìŠ¤ì›Œë“œ-->
+						<label class="control-label col-sm-2" for="orgloc">íŒ¨ìŠ¤ì›Œë“œ</label>
 						<div class="col-sm-3">
-							<!-- ºÎ¼­À§Ä¡¸¦ ÀÌ°÷¿¡ Ãâ·ÂÇÏ¼¼¿ä -->
+							<!-- ë¶€ì„œìœ„ì¹˜ë¥¼ ì´ê³³ì— ì¶œë ¥í•˜ì„¸ìš” -->
 								${user.pass }
 						</div>
 					</div>
+					
 					<div class="form-group">
-						<!-- ÀÔ»çÀÏ-->
-						<label class="control-label col-sm-2" for="orgtel">ÀÔ»çÀÏ</label>
+						<!-- ì…ì‚¬ì¼-->
+						<label class="control-label col-sm-2" for="orgtel">ì…ì‚¬ì¼</label>
 						<div class="col-sm-3">
-							<!-- ºÎ¼­ÀüÈ­¹øÈ£¸¦ ÀÌ°÷¿¡ Ãâ·ÂÇÏ¼¼¿ä -->
+							<!-- ë¶€ì„œì „í™”ë²ˆí˜¸ë¥¼ ì´ê³³ì— ì¶œë ¥í•˜ì„¸ìš” -->
 								${user.hiredate }
 						</div>
 					</div>
 
 					<div class="form-group">
-						<!-- µî±Ş°ú ±Ş¿©-->
-						<label class="control-label col-sm-2" for="orgtel">µî±Ş ¹× ±Ş¿©</label>
+						<!-- ë“±ê¸‰ê³¼ ê¸‰ì—¬-->
+						<label class="control-label col-sm-2" for="orgtel">ë“±ê¸‰ ë° ê¸‰ì—¬</label>
 						<div class="col-sm-3">
-							<!-- °ü¸®ÀÚ¸¦ ÀÌ°÷¿¡ Ãâ·ÂÇÏ¼¼¿ä -->
+							<!-- ê´€ë¦¬ìë¥¼ ì´ê³³ì— ì¶œë ¥í•˜ì„¸ìš” -->
 								${user.grade }(${user.point })
 						</div>
 					</div>
@@ -127,13 +115,13 @@
 					<div class="form-group">
 						<!-- Button -->
 						<div class="col-sm-3 col-sm-offset-2">
-							<input type="button" value="¸ñ·Ï" class="btn btn-success" onclick="location.href='list.do'"/>
-							<input type="submit" value="¼öÁ¤" class="btn btn-success"/>
+							<input type="button" value="ëª©ë¡" class="btn btn-success" onclick="location.href='list.do'"/>
+							<input type="submit" value="ìˆ˜ì •" class="btn btn-success"/>
 						</div>
 					</div>
 				</fieldset>
 			</form>
-	</div>
+		</div>
 	  </div>
 </div>
 

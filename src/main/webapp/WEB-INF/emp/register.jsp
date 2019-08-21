@@ -1,10 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -13,18 +12,18 @@
 <body>
 	<div class="container-fluid">
 			<form role="form" class="form-horizontal"
-				action="/firstPro/insert.do" method="POST" 
+				action="/stswebTest/insert.do" method="POST" 
 				name="myform">
 				<fieldset>
 					<div id="legend">
-						<legend>�Ʒ� ����� �ۼ����ּ���.</legend>
+						<legend>아래 양식을 작성해주세요.</legend>
 					</div>
 					<div class="form-group">
-						<!-- �μ��ڵ� -->
-						<label class="control-label col-sm-2" for="orgcode">�μ��ڵ�</label>
+						<!-- 부서코드 -->
+						<label class="control-label col-sm-2" for="orgcode">부서코드</label>
 						<div class="col-sm-3">
 							<input type="text" id="orgcode" name="deptNo"
-								placeholder="�μ��ڵ�" class="form-control"
+								placeholder="부서코드" class="form-control"
 								 required>
 						</div>
 					</div>
@@ -32,69 +31,63 @@
 					
 					
 					<div class="form-group">
-						<!-- ����-->
-						<label class="control-label col-sm-2" for="orgname">����</label>
+						<!-- 성명-->
+						<label class="control-label col-sm-2" for="orgname">성명</label>
 						<div class="col-sm-3">
 							<input type="text" id="orgname" name="name"
-								placeholder="����" class="form-control" minlength="4" required>
+								placeholder="성명" class="form-control" minlength="4" required>
 
 						</div>
 					</div>
 					<div class="form-group">
-						<!-- ���̵�-->
-						<label class="control-label col-sm-2" for="id">���̵�</label>
+						<!-- 아이디-->
+						<label class="control-label col-sm-2" for="id">아이디</label>
 						<div class="col-sm-3">
 							<input type="text" id="id" name="id"
-								placeholder="���̵�" class="form-control" 
+								placeholder="아이디" class="form-control" 
 								minlength="4" required onkeyup="runAjax()">
 							
 						</div>
-						<input type="button" value="���̵��ߺ�üũ" class="btn btn-success"
+						<input type="button" value="아이디중복체크" class="btn btn-success"
 							onclick="openidcheck()"/>
 						<span id="checkVal"></span>
 					</div>
-
-
-
-				
-
-
 					
 					<div class="form-group">
-						<!-- �н�����-->
-						<label class="control-label col-sm-2" for="pass">�н�����</label>
+						<!-- 패스워드-->
+						<label class="control-label col-sm-2" for="pass">패스워드</label>
 						<div class="col-sm-3">
 							<input type="text" id="pass" name="pass"
-								placeholder="�н�����" class="form-control" minlength="4" >
+								placeholder="패스워드" class="form-control" minlength="4" >
 
 						</div>
 					</div>
 					<div class="form-group">
-						<!-- �Ի糯¥-->
-						<label class="control-label col-sm-2" for="addr">�ּ�</label>
+						<!-- 입사날짜-->
+						<label class="control-label col-sm-2" for="addr">주소</label>
 						<div class="col-sm-3">
 							<input type="text" id="addr" name="addr" 
-							placeholder="�ּ�"
+							placeholder="주소"
 								class="form-control" minlength="4" required>
 
 						</div>
 					</div>
 					<div class="form-group">
-						<!-- ����Ʈ-->
-						<label class="control-label col-sm-2" for="point">����Ʈ</label>
+						<!-- 포인트-->
+						<label class="control-label col-sm-2" for="point">포인트</label>
 						<div class="col-sm-3">
 							<input type="text" id="point" name="point" 
-							placeholder="����Ʈ"
+							placeholder="포인트"
 								class="form-control" minlength="4" required>
 
 						</div>
 					</div>
 					<div class="form-group">
-						<!-- ���-->
-						<label class="control-label col-sm-2" for="grade">���</label>
+						<!-- 등급-->
+						<label class="control-label col-sm-2" for="grade">등급</label>
 						<div class="col-sm-3">
 							<input type="text" id="grade" name="grade" 
-							placeholder="���"
+							placeholder="등급"
 								class="form-control" minlength="4" required>
 
 						</div>
@@ -102,7 +95,7 @@
 					<div class="form-group">
 						<!-- Button -->
 						<div class="col-sm-3 col-sm-offset-2">
-							<input type="submit" value="�����ϱ�" class="btn btn-success"/>
+							<input type="submit" value="가입하기" class="btn btn-success"/>
 						</div>
 					</div>
 				</fieldset>

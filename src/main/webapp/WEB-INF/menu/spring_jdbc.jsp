@@ -1,17 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="list-group"> 
-		<a href="#"	class="list-group-item">emp¸ñ·Ïº¸±â</a> 
-		<a href="#" class="list-group-item">empÈ¸¿ø°¡ÀÔ</a>
-		<a href="#" class="list-group-item">emp°Ë»ö</a>
-		<a href="#"	class="list-group-item">empÀÎ¿ø¼ö</a>
+		<a href="/stswebTest/list.do"	class="list-group-item">empëª©ë¡ë³´ê¸°</a> 
+		<a href="/stswebTest/insert.do" class="list-group-item">empíšŒì›ê°€ì…</a>
+		<a href="/stswebTest/search.do" class="list-group-item">empê²€ìƒ‰</a>
+		<a href="/stswebTest/count.do"	class="list-group-item">empì¸ì›ìˆ˜</a>
 		
 	</div>
 </body>

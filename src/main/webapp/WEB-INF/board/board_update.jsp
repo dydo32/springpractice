@@ -1,75 +1,79 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="board.BoardDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="/kimsaemERP/common/css/font-awesome.css" rel="stylesheet" />
 <!-- Custom styles for this template -->
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<% BoardDTO board = (BoardDTO)request.getAttribute("board"); %>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#category").val("<%=board.getCategory()%>").attr("selected","selected");
+	});
+</script>
 </head>
 <body>
 	<h4>
-		<i class="fa fa-angle-right"></i> °Ô½Ã±Û ÀÛ¼ºÇÏ±â
+		<i class="fa fa-angle-right"></i> ê²Œì‹œê¸€ ìˆ˜ì •í•˜ê¸°
 	</h4>
-	<hr>
+	<hr/>
 	<div class="row mt">
 		<div class="col-lg-12">
 			<div class="form-panel">
-			
-				<form class="form-horizontal style-form" action="" method="post">
+				<form class="form-horizontal style-form" action="/stswebTest/board/update.do" method="post">
 					<div class="form-group" style="border: 1px solid #eff2f7;">
-						<label class="col-sm-2 col-sm-2 control-label">ÀÛ¼ºÀÚ</label>
+						<input type="hidden" name="board_no" value="<%=board.getBoard_no()%>">
+						<div class="form-group">
+							<label for="id" class="col-sm-2 control-label">ë²ˆí˜¸</label>
+							<p class="col-md-8"><%=board.getBoard_no() %></p>
+						</div>
+						
+						<label class="col-sm-2 col-sm-2 control-label">ìž‘ì„±ìž</label>
 						<div class="col-sm-10">
-
-							<p class="form-control-static">±è¼­¿¬</p>
+							<p class="form-control-static"><%=board.getId() %></p>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-2 col-sm-2 control-label">°Ô½Ã±Û À¯Çü</label>
+							<label class="col-sm-2 col-sm-2 control-label">ê²Œì‹œê¸€ ìœ í˜•</label>
 
 							<div class="col-sm-5">
-								<select name="category" class="form-control">
-									<option value="°æÁ¶»ç">°æÁ¶»ç</option>
-									<option value="»ç³»¼Ò½Ä">»ç³»¼Ò½Ä</option>
-									<option value="°Ô½ÃÆÇ">°Ô½ÃÆÇ</option>
+								<select name="category" class="form-control" id="category">
+									<option value="ê²½ì¡°ì‚¬" >ê²½ì¡°ì‚¬</option>
+									<option value="ì‚¬ë‚´ì†Œì‹">ì‚¬ë‚´ì†Œì‹</option>
+									<option value="ê²Œì‹œíŒ">ê²Œì‹œíŒ</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-2 col-sm-2 control-label">Á¦¸ñ</label>
+							<label class="col-sm-2 col-sm-2 control-label">ì œëª©</label>
 							<div class="col-sm-8">
 								<input type="text" class="form-control"
-										 name="title">
-								<span class="help-block">°Ô½Ã±Û À¯Çü¿¡ ¸Â´Â ³»¿ëÀ¸·Î ÀÛ¼º ºÎÅ¹µå¸³´Ï´Ù. </span>
+										 name="title" value="<%=board.getTitle() %>">
+								<span class="help-block">ê²Œì‹œê¸€ ìœ í˜•ì— ë§žëŠ” ë‚´ìš©ìœ¼ë¡œ ìž‘ì„± ë¶€íƒë“œë¦½ë‹ˆë‹¤.</span>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-2 col-sm-2 control-label">³»¿ë</label>
+							<label class="col-sm-2 col-sm-2 control-label">ë‚´ìš©</label>
 							<div class="col-sm-8">
 								<textarea id="content"
 									style="width: 100%; border: 1; overflow: visible; text-overflow: ellipsis;"
-									rows=15 name="content">±ÛÀÛ¼º</textarea>
-
+									rows=15 name="content"><%=board.getContent() %></textarea>
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-lg-4 text-center"></div>
-							<div class="col-lg-2 text-center">
+							<div class="col-lg-8 text-center">
 								<button type="submit" class="btn btn-success"
-									style="width: 100px; background-color: #0ea006">µî·Ï</button>
-							</div>
-							<div class="col-lg-2 text-center">
+									style="width: 100px; background-color: #0ea006; margin-left: 50%;">ë“±ë¡</button>
 								<button type="reset" class="btn btn-default"
-									style="width: 100px; background-color: #9a9a9a">Ãë¼Ò</button>
+									style="width: 100px; background-color: #9a9a9a;"
+									onclick="location.href='/stswebTest/board/list.do?category=all'"									
+									>ì·¨ì†Œ</button>
 							</div>
-						
 						</div>
 					</div>
 				</form>

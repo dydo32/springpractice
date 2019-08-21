@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*,emp.dto.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Bootstrap Example</title>
-<meta charset="euc-kr">
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   
 </head>
 <body>
@@ -20,13 +20,13 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>»ç¿øÄÚµå</th>
-					<th>»ç¿ø¸í</th>
-					<th>ÀÔ»çÀÏ</th>
-					<th>µî±Ş</th>
-					<th>ÁÖ¼Ò</th>
-					<th>ºÎ¼­ÄÚµå</th>
-					<th>»èÁ¦</th>
+					<th>ì‚¬ì›ì½”ë“œ</th>
+					<th>ì‚¬ì›ëª…</th>
+					<th>ì…ì‚¬ì¼</th>
+					<th>ë“±ê¸‰</th>
+					<th>ì£¼ì†Œ</th>
+					<th>ë¶€ì„œì½”ë“œ</th>
+					<th>ì‚­ì œ</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -34,19 +34,18 @@
 				EmpDTO emp =  deptlist.get(i);%>
 				<tr>
 					<td><a
-					 href="/firstPro/read.do?id=<%= emp.getId()%>"><%= emp.getId() %></a></td>
+					 href="/stswebTest/read.do?id=<%= emp.getId()%>"><%= emp.getId() %></a></td>
 					<td><%= emp.getName() %></td>
 					<td><%= emp.getHiredate() %></td>
 					<td><%= emp.getGrade() %></td>
 					<td><%= emp.getAddr() %></td>
 					<td><%= emp.getDeptNo()%></td>
 					<td><a 
-					href="/firstPro/delete.do?id=<%= emp.getId()%>">»èÁ¦</a></td>
+					href="/stswebTest/delete.do?id=<%= emp.getId()%>">ì‚­ì œ</a></td>
 				</tr>
 			<%}%>
 			</tbody>
 		</table>
 	</div>
-
 </body>
 </html>

@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<img alt="" src="/stswebTest/resources/images/flower.jpg">
+	<img alt="" src="/stswebTest/resources/images/main.PNG">
+	<img alt="" src="/stswebTest/myimg/main.PNG">
 </body>
 </html>

@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="/stswebTest/resources/common/css/main.css" />
@@ -38,7 +38,7 @@
 			 		 <div
 			 		 style="border-color:white;height: 800px;">
 				        <div style="background-color:#63cde7;padding: 20px;
-				        font-family:HY-견고딕;font-size: 16pt;color: white;
+				        font-family:HY-寃ш퀬�뵓;font-size: 16pt;color: white;
 				         font-weight: bolder;">${loginUser.job_category}</div>
 						<tiles:insertAttribute name="menu"></tiles:insertAttribute>
       				 </div>

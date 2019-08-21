@@ -19,17 +19,13 @@ public class MyEmpDAOImpl implements MyEmpDAO {
 	@Override
 	public int count() {
 		return 
-		 template.queryForObject("select count(id) from kitriemp",
-				 	Integer.class);
+		 template.queryForObject("select count(id) from kitriemp", Integer.class);
 	}
 
 	@Override
 	public int insert(EmpDTO user) {
-		String sql =
-		"insert into kitriemp values(?,?,?,?,sysdate,?,1000,?)";
-		//?������� update�޼ҵ��� �����Ѵ�.
-		int result = 
-		 template.update(sql, user.getId(),user.getPass(),
+		String sql = "insert into kitriemp values(?,?,?,?,sysdate,?,1000,?)";
+		int result =  template.update(sql, user.getId(),user.getPass(),
 				 user.getName(),user.getAddr(),
 				 user.getGrade(),user.getDeptNo());
 		return result;

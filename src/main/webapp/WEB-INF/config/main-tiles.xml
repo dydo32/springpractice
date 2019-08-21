@@ -13,16 +13,21 @@
  	</definition>
  	
  	<definition name="menu/jdbc" extends="mainTemplate">
- 		<put-attribute name="content" value="/WEB-INF/emp/register.jsp"/>
+ 		<put-attribute name="content" value="/WEB-INF/emp/emp_list.jsp"/>
  	</definition>
  	
  	<definition name="menu/mybatis" extends="mainTemplate">
  		<put-attribute name="menu" value="/WEB-INF/menu/mybatis_menu.jsp"/>
-		<put-attribute name="content" value="/WEB-INF/board/boardlist.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/board/board_list.jsp"/>
  	</definition>
  	
  	<definition name="menu/advanced" extends="mainTemplate">
  		<put-attribute name="menu" value="/WEB-INF/menu/advanced_menu.jsp"/>
 		<put-attribute name="content" value="/WEB-INF/job/purchase_main.jsp"/>
  	</definition>
+ 	
+ 	<definition name="emp/list" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/emp_list.jsp"/>
+ 	</definition>
+ 	
  </tiles-definitions>

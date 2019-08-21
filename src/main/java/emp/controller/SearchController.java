@@ -16,7 +16,7 @@ import emp.dto.EmpDTO;
 @Controller
 public class SearchController {
 	@Autowired
-	@Qualifier("empdao")
+	@Qualifier("empmybatis")
 	MyEmpDAO dao;
 
 	@RequestMapping(value="/search.do",method=RequestMethod.GET)
@@ -25,14 +25,13 @@ public class SearchController {
 	}
 	
 	@RequestMapping(value="/search.do",method=RequestMethod.POST)
-	public ModelAndView search(@RequestParam String addr,
-							String test){
+	public ModelAndView search(@RequestParam String addr, String test){
 		System.out.println("addr=>"+addr);
 		System.out.println("test=>"+test);
 		ModelAndView mav = new ModelAndView();
 		List<EmpDTO> emplist = dao.findByAddr(addr);
 		mav.addObject("emplist",emplist);
-		mav.setViewName("emp/emp_list");
+		mav.setViewName("emp/list");
 		return mav;
 	}
 }
