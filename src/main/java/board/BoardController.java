@@ -42,7 +42,26 @@ public class BoardController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/board/read")
+	//boardlist_jstl
+	@RequestMapping(value="/board/{category}/{board_no}")
+	public String read(@PathVariable String board_no,@PathVariable String category,String state, Model model) {
+		//System.out.println("readcontroller=>"+board_no+","+state);
+		BoardDTO board = service.read(board_no);
+		String viewName="";
+		if(state.equals("READ")) {
+			viewName="board/read";
+		}else if(state.equals("UPDATE")) {
+			viewName="board/update";
+		}
+		System.out.println(model);
+		model.addAttribute("board",board);
+		System.out.println(model);
+		return viewName;
+	}
+	
+/*	
+	//boardlist.jsp
+ 	@RequestMapping(value="/board/read")
 	 public ModelAndView read(String board_no, String state, Model model) {
 		System.out.println("readcontroller=>"+board_no+","+state);
 		ModelAndView mav = new ModelAndView();
@@ -56,7 +75,7 @@ public class BoardController {
 		mav.addObject("board",board);
 		mav.setViewName(viewName);
 		return mav;
-	} 
+	} */
 	
 	@RequestMapping(value="/board/update.do")
 	public String update(BoardDTO board) {

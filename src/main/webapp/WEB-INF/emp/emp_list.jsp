@@ -9,13 +9,12 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
 </head>
 <body>
 	<div class="container">
-	<%ArrayList<EmpDTO> deptlist =
+	<%ArrayList<EmpDTO> emplist =
 			(ArrayList<EmpDTO>) request.getAttribute("emplist"); 
-	 	 int size = deptlist.size();
+	 	 int size = emplist.size();
 	  %>
 		<table class="table">
 			<thead>
@@ -31,7 +30,7 @@
 			</thead>
 			<tbody>
 			<%for(int i=0;i<size;i++){ 
-				EmpDTO emp =  deptlist.get(i);%>
+				EmpDTO emp =  emplist.get(i);%>
 				<tr>
 					<td><a
 					 href="/stswebTest/read.do?id=<%= emp.getId()%>"><%= emp.getId() %></a></td>
@@ -40,8 +39,7 @@
 					<td><%= emp.getGrade() %></td>
 					<td><%= emp.getAddr() %></td>
 					<td><%= emp.getDeptNo()%></td>
-					<td><a 
-					href="/stswebTest/delete.do?id=<%= emp.getId()%>">삭제</a></td>
+					<td><a href="/stswebTest/delete.do?id=<%= emp.getId()%>">삭제</a></td>
 				</tr>
 			<%}%>
 			</tbody>

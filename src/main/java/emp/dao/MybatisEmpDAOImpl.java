@@ -1,6 +1,8 @@
 package emp.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +46,11 @@ public class MybatisEmpDAOImpl implements MyEmpDAO {
 
 	@Override
 	public EmpDTO login(String id, String pass) {
-		return null;
+		Map<String,String> map = new HashMap<String, String>();
+		map.put("id", id);
+		map.put("pass", pass);
+		EmpDTO loginUser = sqlSession.selectOne("kr.kitri.emp.login",map);
+		return loginUser;
 	}
 
 	@Override
@@ -57,6 +63,16 @@ public class MybatisEmpDAOImpl implements MyEmpDAO {
 	public List<EmpDTO> findByAddr(String addr) {
 		List<EmpDTO> emplist = sqlSession.selectList("kr.kitri.emp.findbyaddr", addr);
 		return emplist;
+	}
+
+	@Override
+	public boolean idCheck(String id) {
+		boolean state = false;
+		EmpDTO user = sqlSession.selectOne("kr.kitri.emp.idcheck", id);
+		if(user!=null) {
+			state = true;
+		}
+		return state;
 	}
 
 }
